@@ -1,0 +1,16 @@
+export const filenames = [
+  "Monika Kocielska - Czerwień koloru ciała (2), 2022, olej na płótnie, 90x90 cm",
+  "Monika Kocielska - Czerwień koloru ciała (3), 2022, olej na płótnie, 90x90 cm",
+  "Monika Kocielska - Kobieta 01, 2016, olej na płótnie, 130x130 cm",
+  "Monika Kocielska - Kobieta 02, 2016, olej na płótnie, 130x130 cm",
+  "Monika Kocielska - Kobieta 03, 2016, olej na płótnie, 90x130 cm",
+  "Monika Kocielska - Kobieta 05, 2016, olej na płótnie, 70x130 cm",
+  "Monika Kocielska - Kobieta 07, 2016, olej na płótnie, 90x130 cm",
+  "Monika Kocielska - Kobieta 08, 2016, olej na płótnie, 50x130 cm",
+  "Monika Kocielska - Kobieta 10, 2016, olej na płótnie, 100x130 cm",
+  "Monika Kocielska - Kobieta 11, 2022, olej na płótnie, 50x130 cm",
+  "Monika Kocielska - Kobieta 12, 2022, olej na płótnie, 50x130 cm",
+  "Monika Kocielska - Kobieta 13, 2022, olej na płótnie, 70x130 cm",
+  "Monika Kocielska - Kobieta 14, 2022, olej na płótnie, 70x130 cm",
+  "Monika Kocielska - Kobieta 15, 2022, olej na płótnie, 50x130 cm",
+];
