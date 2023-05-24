@@ -1,0 +1,8 @@
+@import "../styles/variables";
+
+.general-wrapper {
+  background-color: $color-white;
+  max-width: $width-main;
+  margin: 0 auto;
+  padding: 2rem;
+}

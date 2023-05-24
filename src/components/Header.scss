@@ -1,5 +1,12 @@
 .header {
-  padding: 5rem;
+  &__wrapper {
+    // padding: 5rem;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+  }
 
   & p {
     white-space: pre-line;

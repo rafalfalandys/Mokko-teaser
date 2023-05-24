@@ -4,13 +4,19 @@ import "./PaintingCard.scss";
 const PaintingCard: React.FC<{ paintingData: PaintingData }> = ({
   paintingData,
 }) => {
-  const imageSrc = `/images/small/ja slepa kobieta/${paintingData.fileName.normalize()}.jpeg`;
+  const imgPath = `/images/small/${paintingData.folder}/${paintingData.fileName}.jpeg`;
 
   return (
-    <div>
-      <figure>
-        <img src={imageSrc} alt="" />
+    <div className="card">
+      <figure className="card__image">
+        <img src={imgPath} alt="painting" />
       </figure>
+      <div className="card__description">
+        <span>{paintingData.paintingTitle}</span>
+        <span>{paintingData.size}</span>
+        <span>{paintingData.technique}</span>
+        <span>{paintingData.year}</span>
+      </div>
     </div>
   );
 };

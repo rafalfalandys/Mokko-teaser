@@ -1,10 +1,12 @@
 import { PaintingData } from "./types";
 
-export const getDataFromFiles: (filenames: string[]) => PaintingData[] = (
-  filenames
-) => {
+export const getDataFromFiles: (
+  folder: string,
+  filenames: string[]
+) => PaintingData[] = (folder, filenames) => {
   const paintingsData = filenames.map((title) => {
     return {
+      folder,
       fileName: title,
       paintingTitle: title.split("-")[1].split(",")[0].trim(),
       year: title.split("-")[1].split(",")[1].trim(),

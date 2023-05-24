@@ -1,0 +1,25 @@
+@import "../styles/variables";
+
+.main {
+  &__wrapper {
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  &__section {
+    margin-top: 10rem;
+    & h2 {
+      margin-bottom: 4rem;
+    }
+    &__paintings {
+      width: 100%;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      @media (max-width: $break-phone) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
