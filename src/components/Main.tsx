@@ -31,22 +31,30 @@ const Main: React.FC = () => {
     <div className="main__wrapper">
       <main className="main">
         <section className="main__section">
-          <h2>{text.headerBlindWoman}</h2>
+          <header className="main__section__header">
+            <h2>{text.headerBlindWoman}</h2>
+          </header>
           <div className="main__section__paintings">{cardsBlindWoman}</div>
         </section>
 
         <section className="main__section">
-          <h2>{text.headerTinySensibility}</h2>
+          <header className="main__section__header">
+            <h2>{text.headerTinySensibility}</h2>
+          </header>
           <div className="main__section__paintings">{cardsTinySensibility}</div>
         </section>
 
         <section className="main__section">
-          <h2>{text.headerPureHappiness}</h2>
+          <header className="main__section__header">
+            <h2>{text.headerPureHappiness}</h2>
+          </header>
           <div className="main__section__paintings">{cardsPureHappiness}</div>
         </section>
 
         <section className="main__section">
-          <h2>{text.headerEphemerally}</h2>
+          <header className="main__section__header">
+            <h2>{text.headerEphemerally}</h2>
+          </header>
           <div className="main__section__paintings">{cardsEphemerally}</div>
         </section>
       </main>
