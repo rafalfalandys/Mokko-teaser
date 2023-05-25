@@ -1,10 +1,11 @@
 import { PaintingData } from "../types";
 import "./PaintingCard.scss";
 
-const PaintingCard: React.FC<{ paintingData: PaintingData }> = ({
-  paintingData,
-}) => {
-  const imgPath = `/images/small/${paintingData.folder}/${paintingData.fileName}.jpeg`;
+const PaintingCard: React.FC<{
+  paintingData: PaintingData;
+  folder: string;
+}> = ({ paintingData, folder }) => {
+  const imgPath = `/images/small/${folder}/${paintingData.fileName}.jpeg`;
 
   return (
     <div className="card">

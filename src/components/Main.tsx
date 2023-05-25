@@ -1,5 +1,9 @@
-import { filenames } from "../assets/paintingObjects";
-import { getDataFromFiles } from "../helper";
+import {
+  dataEphemerally,
+  dataMeBlindWoman,
+  dataPureHappiness,
+  dataTinySensibility,
+} from "../assets/paintingObjects";
 import useText from "../hooks/useText";
 import "./Main.scss";
 import PaintingCard from "./PaintingCard";
@@ -7,32 +11,20 @@ import PaintingCard from "./PaintingCard";
 const Main: React.FC = () => {
   const text = useText();
 
-  const paintingsBlindWoman = getDataFromFiles(
-    "me blind woman",
-    filenames.blindWoman
-  ).map((paintingData, i) => (
-    <PaintingCard paintingData={paintingData} key={i} />
+  const cardsBlindWoman = dataMeBlindWoman.map((data, i) => (
+    <PaintingCard paintingData={data} folder="me blind woman" key={i} />
   ));
 
-  const paintingsTinySensibility = getDataFromFiles(
-    "tiny sensibility",
-    filenames.tinySensibility
-  ).map((paintingData, i) => (
-    <PaintingCard paintingData={paintingData} key={i} />
+  const cardsTinySensibility = dataTinySensibility.map((data, i) => (
+    <PaintingCard paintingData={data} folder="tiny sensibility" key={i} />
   ));
 
-  const paintingsPureHappiness = getDataFromFiles(
-    "pure happiness",
-    filenames.pureHappiness
-  ).map((paintingData, i) => (
-    <PaintingCard paintingData={paintingData} key={i} />
+  const cardsPureHappiness = dataPureHappiness.map((data, i) => (
+    <PaintingCard paintingData={data} folder="pure happiness" key={i} />
   ));
 
-  const paintingsEphemerally = getDataFromFiles(
-    "ephemerally",
-    filenames.ephemerally
-  ).map((paintingData, i) => (
-    <PaintingCard paintingData={paintingData} key={i} />
+  const cardsEphemerally = dataEphemerally.map((data, i) => (
+    <PaintingCard paintingData={data} folder="ephemerally" key={i} />
   ));
 
   return (
@@ -40,26 +32,22 @@ const Main: React.FC = () => {
       <main className="main">
         <section className="main__section">
           <h2>{text.headerBlindWoman}</h2>
-          <div className="main__section__paintings">{paintingsBlindWoman}</div>
+          <div className="main__section__paintings">{cardsBlindWoman}</div>
         </section>
 
         <section className="main__section">
           <h2>{text.headerTinySensibility}</h2>
-          <div className="main__section__paintings">
-            {paintingsTinySensibility}
-          </div>
+          <div className="main__section__paintings">{cardsTinySensibility}</div>
         </section>
 
         <section className="main__section">
           <h2>{text.headerPureHappiness}</h2>
-          <div className="main__section__paintings">
-            {paintingsPureHappiness}
-          </div>
+          <div className="main__section__paintings">{cardsPureHappiness}</div>
         </section>
 
         <section className="main__section">
           <h2>{text.headerEphemerally}</h2>
-          <div className="main__section__paintings">{paintingsEphemerally}</div>
+          <div className="main__section__paintings">{cardsEphemerally}</div>
         </section>
       </main>
       ;
