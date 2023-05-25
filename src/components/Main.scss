@@ -5,33 +5,4 @@
     margin-top: 5rem;
     width: 100%;
   }
-
-  &__section {
-    margin-top: 10rem;
-
-    &__header {
-      position: sticky;
-      top: 0;
-      left: 0;
-      background-color: $color-white;
-      padding-bottom: 1rem;
-      margin-bottom: 3rem;
-      z-index: 1;
-    }
-
-    & h2 {
-      margin-bottom: 0;
-    }
-
-    &__paintings {
-      width: 100%;
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-
-      @media (max-width: $break-phone) {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  }
 }

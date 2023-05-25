@@ -6,59 +6,46 @@ import {
 } from "../assets/paintingObjects";
 import useText from "../hooks/useText";
 import "./Main.scss";
-import PaintingCard from "./PaintingCard";
+import OneSection from "./OneSection";
 
 const Main: React.FC = () => {
   const text = useText();
 
-  const cardsBlindWoman = dataMeBlindWoman.map((data, i) => (
-    <PaintingCard paintingData={data} folder="me blind woman" key={i} />
-  ));
+  const sectionsData = [
+    {
+      folder: "me blind woman",
+      data: dataMeBlindWoman,
+      header: `${text.headerBlindWoman}`,
+    },
+    {
+      folder: "tiny sensibility",
+      data: dataTinySensibility,
+      header: `${text.headerTinySensibility}`,
+    },
+    {
+      folder: "pure happiness",
+      data: dataPureHappiness,
+      header: `${text.headerPureHappiness}`,
+    },
+    {
+      folder: "ephemerally",
+      data: dataEphemerally,
+      header: `${text.headerEphemerally}`,
+    },
+  ];
 
-  const cardsTinySensibility = dataTinySensibility.map((data, i) => (
-    <PaintingCard paintingData={data} folder="tiny sensibility" key={i} />
-  ));
-
-  const cardsPureHappiness = dataPureHappiness.map((data, i) => (
-    <PaintingCard paintingData={data} folder="pure happiness" key={i} />
-  ));
-
-  const cardsEphemerally = dataEphemerally.map((data, i) => (
-    <PaintingCard paintingData={data} folder="ephemerally" key={i} />
+  const sections = sectionsData.map((sectionData, i) => (
+    <OneSection
+      key={i}
+      sectionData={sectionData.data}
+      folder={sectionData.folder}
+      header={sectionData.header}
+    />
   ));
 
   return (
     <div className="main__wrapper">
-      <main className="main">
-        <section className="main__section">
-          <header className="main__section__header">
-            <h2>{text.headerBlindWoman}</h2>
-          </header>
-          <div className="main__section__paintings">{cardsBlindWoman}</div>
-        </section>
-
-        <section className="main__section">
-          <header className="main__section__header">
-            <h2>{text.headerTinySensibility}</h2>
-          </header>
-          <div className="main__section__paintings">{cardsTinySensibility}</div>
-        </section>
-
-        <section className="main__section">
-          <header className="main__section__header">
-            <h2>{text.headerPureHappiness}</h2>
-          </header>
-          <div className="main__section__paintings">{cardsPureHappiness}</div>
-        </section>
-
-        <section className="main__section">
-          <header className="main__section__header">
-            <h2>{text.headerEphemerally}</h2>
-          </header>
-          <div className="main__section__paintings">{cardsEphemerally}</div>
-        </section>
-      </main>
-      ;
+      <main className="main">{sections}</main>;
     </div>
   );
 };

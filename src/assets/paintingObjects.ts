@@ -1,4 +1,12 @@
-export const dataEphemerally = [
+export type CardType = {
+  fileName: string;
+  paintingTitle: string;
+  year: string;
+  technique: string;
+  size: string;
+};
+
+export const dataEphemerally: CardType[] = [
   {
     fileName: "Efemera o jesieni 01",
     paintingTitle: "Efemera o jesieni 01",
@@ -146,7 +154,7 @@ export const dataTinySensibility = [
     size: "60x90 cm",
   },
   {
-    fileName: "Wrazliwosc zmagań (11)",
+    fileName: "Wrazliwosc zmagań (11)",
     paintingTitle: "Wrażliwość zmagań (11)",
     year: "2022",
     technique: "olej na płótnie",

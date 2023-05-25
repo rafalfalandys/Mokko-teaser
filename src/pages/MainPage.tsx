@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Main from "../components/Main";
+import Modal from "../components/Modal";
 import "./MainPage.scss";
 
 const MainPage: React.FC = () => {
@@ -7,6 +8,7 @@ const MainPage: React.FC = () => {
     <div className="general-wrapper">
       <Header />
       <Main />
+      <Modal />
     </div>
   );
 };
