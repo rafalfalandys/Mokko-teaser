@@ -17,3 +17,8 @@ export const getDataFromFiles: (
 
   return paintingsData;
 };
+
+// export const buildQuery = (folder: string, painting: string) => {
+//   console.log(painting);
+//   return `?section=${folder}?painting=${painting}`;
+// };

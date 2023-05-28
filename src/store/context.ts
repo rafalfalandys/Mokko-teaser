@@ -1,12 +1,14 @@
 import React from "react";
 
-const defaultState: {
+type DefaultStateType = {
   isModalVisible: boolean;
   isEnglish: boolean;
   showModal: () => void;
   hideModal: () => void;
   toggleLanguage: () => void;
-} = {
+};
+
+const defaultState: DefaultStateType = {
   isModalVisible: false,
   isEnglish: false,
 

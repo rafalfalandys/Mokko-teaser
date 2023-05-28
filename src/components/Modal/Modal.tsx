@@ -1,22 +1,31 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import "./Modal.scss";
 import Context from "../../store/context";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import usePaintings from "../../hooks/usePaintings";
 import { createPortal } from "react-dom";
 import Interface from "./Interface";
+import useKeys from "../../hooks/use-keys";
 
 const Modal = () => {
-  const { isModalVisible, hideModal } = useContext(Context);
+  const { isModalVisible, hideModal, showModal } = useContext(Context);
   const navigate = useNavigate();
-  const { section, paintingData } = usePaintings();
+  const { curSection, paintingData } = usePaintings();
+  const location = useLocation();
+  useKeys();
+
   /* eslint-disable */
   const portalEl = document.getElementById("overlays")!;
 
   // defining dynamic path to proper image
   const imgPath = paintingData
-    ? `/images/large/${section.folder}/${paintingData.fileName}.jpeg`
+    ? `/images/large/${curSection.folder}/${paintingData.fileName}.jpeg`
     : "";
+
+  // show model after sending a link
+  useEffect(() => {
+    if (location.search) showModal();
+  }, []);
 
   // hiding modal and navigating back to home page
   const onClickHandler = () => {

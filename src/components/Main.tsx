@@ -3,9 +3,9 @@ import "./Main.scss";
 import OneSection from "./OneSection";
 
 const Main: React.FC = () => {
-  const { sectionsData } = usePaintings();
+  const { allSectionsData } = usePaintings();
 
-  const sections = sectionsData.map((sectionData, i) => (
+  const sections = allSectionsData.map((sectionData, i) => (
     <OneSection
       key={i}
       sectionData={sectionData.data}

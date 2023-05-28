@@ -7,30 +7,46 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Context from "../../store/context";
+import { useNavigate } from "react-router-dom";
 
 const Interface = () => {
-  const { section, curPaintingNo } = usePaintings();
+  const { curSection, curPaintingIndex, nextSlide, prevSlide } = usePaintings();
   const { hideModal } = useContext(Context);
+  const navigate = useNavigate();
+
+  const hideModalHandler = () => {
+    hideModal();
+    navigate("/");
+  };
 
   return (
     <div className="interface">
       {/* counter */}
       <h3 className="interface__counter">
-        {section?.header}
+        {curSection?.header}
         <span className="interface__counter--numbers">
           &nbsp;
-          {`${curPaintingNo} / ${section?.data.length}`}
+          {`${curPaintingIndex + 1} / ${curSection?.data.length}`}
         </span>
       </h3>
       {/* arrows */}
-      <i className="interface__icon interface__icon--arrow-left">
+      <i
+        className="interface__icon interface__icon--arrow-left"
+        onClick={prevSlide}
+      >
         <ChevronLeftIcon />
       </i>
-      <i className="interface__icon interface__icon--arrow-right">
+      <i
+        className="interface__icon interface__icon--arrow-right"
+        onClick={nextSlide}
+      >
         <ChevronRightIcon />
       </i>
       {/* close btn */}
-      <i className="interface__icon interface__icon--close" onClick={hideModal}>
+      <i
+        className="interface__icon interface__icon--close"
+        onClick={hideModalHandler}
+      >
         <XMarkIcon />
       </i>
     </div>
