@@ -8,12 +8,24 @@
     transition: all 0.2s;
     cursor: pointer;
 
+    @media (max-width: $break-phone) {
+      top: 80%;
+    }
+
     &--arrow-left {
       left: 2rem;
+
+      @media (max-width: $break-phone) {
+        left: 1rem;
+      }
     }
 
     &--arrow-right {
       right: 2rem;
+
+      @media (max-width: $break-phone) {
+        right: 1rem;
+      }
     }
 
     &--close {
@@ -33,8 +45,8 @@
     color: $color-grey-light-very;
 
     @media (max-width: $break-phone) {
-      left: 50%;
-      transform: translateX(calc(($width-main/2 * -1) + 0.5rem));
+      //   left: 50%;
+      //   transform: translateX(calc(($width-main/2 * -1) + 0.5rem));
     }
   }
 }
