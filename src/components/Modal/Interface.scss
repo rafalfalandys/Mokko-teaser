@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.interface {
+  &__icon {
+    position: absolute;
+    top: 50%;
+    height: 4rem;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &--arrow-left {
+      left: 2rem;
+    }
+
+    &--arrow-right {
+      right: 2rem;
+    }
+
+    &--close {
+      top: 2rem;
+      right: 2rem;
+    }
+
+    & svg {
+      height: 100%;
+      color: $color-grey-light-very;
+    }
+  }
+
+  &__counter {
+    position: relative;
+    padding: 1.5rem;
+    color: $color-grey-light-very;
+
+    @media (max-width: $break-phone) {
+      left: 50%;
+      transform: translateX(calc(($width-main/2 * -1) + 0.5rem));
+    }
+  }
+}

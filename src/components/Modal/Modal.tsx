@@ -4,6 +4,7 @@ import Context from "../../store/context";
 import { useNavigate } from "react-router-dom";
 import usePaintings from "../../hooks/usePaintings";
 import { createPortal } from "react-dom";
+import Interface from "./Interface";
 
 const Modal = () => {
   const { isModalVisible, hideModal } = useContext(Context);
@@ -20,7 +21,9 @@ const Modal = () => {
   // hiding modal and navigating back to home page
   const onClickHandler = () => {
     hideModal();
-    navigate("/");
+    setTimeout(() => {
+      navigate("/");
+    }, 300);
   };
 
   const modal = (
@@ -34,6 +37,7 @@ const Modal = () => {
           onClick={(e) => e.stopPropagation()}
         />
       </figure>
+      <Interface />
     </div>
   );
 

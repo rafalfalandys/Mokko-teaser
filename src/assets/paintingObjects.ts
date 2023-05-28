@@ -154,7 +154,7 @@ export const dataTinySensibility: CardType[] = [
     size: "60x90 cm",
   },
   {
-    fileName: "Wrazliwosc zmagań (11)",
+    fileName: "Wrazliwosc zmagan (11)",
     paintingTitle: "Wrażliwość zmagań (11)",
     year: "2022",
     technique: "olej na płótnie",

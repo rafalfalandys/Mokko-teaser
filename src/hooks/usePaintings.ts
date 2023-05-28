@@ -46,7 +46,13 @@ const usePaintings = () => {
       )[0]
     : undefined;
 
-  return { sectionsData, section, paintingData };
+  // painting index
+  const curPaintingNo =
+    section?.data.findIndex(
+      (painting) => painting.paintingTitle === paintingData?.paintingTitle
+    ) + 1;
+
+  return { sectionsData, section, paintingData, curPaintingNo };
 };
 
 export default usePaintings;
