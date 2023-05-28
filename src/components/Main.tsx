@@ -1,38 +1,9 @@
-import {
-  dataEphemerally,
-  dataMeBlindWoman,
-  dataPureHappiness,
-  dataTinySensibility,
-} from "../assets/paintingObjects";
-import useText from "../hooks/useText";
+import usePaintings from "../hooks/usePaintings";
 import "./Main.scss";
 import OneSection from "./OneSection";
 
 const Main: React.FC = () => {
-  const text = useText();
-
-  const sectionsData = [
-    {
-      folder: "me blind woman",
-      data: dataMeBlindWoman,
-      header: `${text.headerBlindWoman}`,
-    },
-    {
-      folder: "tiny sensibility",
-      data: dataTinySensibility,
-      header: `${text.headerTinySensibility}`,
-    },
-    {
-      folder: "pure happiness",
-      data: dataPureHappiness,
-      header: `${text.headerPureHappiness}`,
-    },
-    {
-      folder: "ephemerally",
-      data: dataEphemerally,
-      header: `${text.headerEphemerally}`,
-    },
-  ];
+  const sectionsData = usePaintings();
 
   const sections = sectionsData.map((sectionData, i) => (
     <OneSection

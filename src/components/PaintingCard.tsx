@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { PaintingData } from "../types";
 import "./PaintingCard.scss";
 import Context from "../store/context";
+import { Link } from "react-router-dom";
 
 type PropsType = { paintingData: PaintingData; folder: string };
 
@@ -12,9 +13,11 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
 
   return (
     <div className="card">
-      <figure className="card__image" onClick={showModal}>
-        <img src={imgPath} alt="painting" />
-      </figure>
+      <Link to={`?section=${folder}?painting=${paintingData.paintingTitle}`}>
+        <figure className="card__image" onClick={showModal}>
+          <img src={imgPath} alt="painting" />
+        </figure>
+      </Link>
       <div className="card__description">
         <span>{paintingData.paintingTitle}</span>
         <span>{paintingData.size}</span>

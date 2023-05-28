@@ -58,7 +58,7 @@ export const dataEphemerally: CardType[] = [
   },
 ];
 
-export const dataPureHappiness = [
+export const dataPureHappiness: CardType[] = [
   {
     fileName: "Sama szczesciem chwila",
     paintingTitle: "Sama szczęściem chwila",
@@ -89,7 +89,7 @@ export const dataPureHappiness = [
   },
 ];
 
-export const dataTinySensibility = [
+export const dataTinySensibility: CardType[] = [
   {
     fileName: "Wrazliwosc blogosci (1)",
     paintingTitle: "Wrażliwość błogości (1)",
@@ -169,7 +169,7 @@ export const dataTinySensibility = [
   },
 ];
 
-export const dataMeBlindWoman = [
+export const dataMeBlindWoman: CardType[] = [
   {
     fileName: "Czerwien koloru ciala (2)",
     paintingTitle: "Czerwień koloru ciała (2)",
