@@ -25,7 +25,7 @@ function useKeys() {
         navigate("/");
       }
     },
-    [hideModal]
+    [hideModal, navigate]
   );
 
   useEffect(() => {
