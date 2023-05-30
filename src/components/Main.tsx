@@ -11,6 +11,7 @@ const Main: React.FC = () => {
       sectionData={sectionData.data}
       folder={sectionData.folder}
       header={sectionData.header}
+      description={sectionData.description}
     />
   ));
 

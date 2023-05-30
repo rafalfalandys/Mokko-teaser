@@ -8,8 +8,6 @@ function useKeys() {
   const { nextSlide, prevSlide } = usePaintings();
   const navigate = useNavigate();
 
-  console.log("eeee");
-
   const arrowHandler = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") nextSlide();

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import {
+  CardType,
   dataEphemerally,
   dataMeBlindWoman,
   dataPureHappiness,
@@ -9,32 +10,43 @@ import useQuery from "./useQuery";
 import useText from "./useText";
 import useBuildQuery from "./useBuildQuery";
 
+type AllSectionsData = {
+  folder: string;
+  data: CardType[];
+  header: string;
+  description: string;
+};
+
 const usePaintings = () => {
   const text = useText();
   const queryObj = useQuery();
   const navigate = useNavigate();
   const buildQuery = useBuildQuery();
 
-  const allSectionsData = [
+  const allSectionsData: AllSectionsData[] = [
     {
       folder: "me blind woman",
       data: dataMeBlindWoman,
-      header: `${text.headerBlindWoman}`,
+      header: `${text.headerMeBlindWoman}`,
+      description: `${text.textMeBlindWoman}`,
     },
     {
       folder: "tiny sensibility",
       data: dataTinySensibility,
       header: `${text.headerTinySensibility}`,
+      description: `${text.textTinySensibility}`,
     },
     {
       folder: "pure happiness",
       data: dataPureHappiness,
       header: `${text.headerPureHappiness}`,
+      description: `${text.textPureHappiness}`,
     },
     {
       folder: "ephemerally",
       data: dataEphemerally,
       header: `${text.headerEphemerally}`,
+      description: `${text.textEphemerally}`,
     },
   ];
 
