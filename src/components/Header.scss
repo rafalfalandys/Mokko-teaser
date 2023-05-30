@@ -1,4 +1,8 @@
+@import "../styles/variables";
+
 .header {
+  position: relative;
+
   &__logo {
     display: flex;
     justify-content: center;
@@ -9,6 +13,16 @@
   }
 }
 
-br {
-  margin-bottom: 2rem;
+.language-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: $font-medium;
+  color: $color-grey-light;
+  cursor: pointer;
+  padding: 0 0 2rem 2rem;
+
+  &--active {
+    color: $color-black;
+  }
 }

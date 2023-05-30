@@ -1,9 +1,12 @@
 import "./Header.scss";
 import logo from "../assets/logo_main.png";
 import useText from "../hooks/useText";
+import { useContext } from "react";
+import Context from "../store/context";
 
 const Header: React.FC = () => {
   const text = useText();
+  const { toggleLanguage, isEnglish } = useContext(Context);
 
   return (
     <div className="header__wrapper">
@@ -16,8 +19,16 @@ const Header: React.FC = () => {
           className="header__description"
           dangerouslySetInnerHTML={text.description}
         />
-        {/* <p className="header__description">{text.description}</p> */}
-        <p></p>
+        <div className="language-switch" onClick={toggleLanguage}>
+          <span className={`${isEnglish ? "" : "language-switch--active"}`}>
+            PL
+          </span>{" "}
+          /
+          <span className={`${isEnglish ? "language-switch--active" : ""}`}>
+            {" "}
+            EN
+          </span>
+        </div>
       </header>
     </div>
   );
