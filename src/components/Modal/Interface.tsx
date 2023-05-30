@@ -10,7 +10,8 @@ import Context from "../../store/context";
 import { useNavigate } from "react-router-dom";
 
 const Interface = () => {
-  const { curSection, curPaintingIndex, nextSlide, prevSlide } = usePaintings();
+  const { curSection, curPaintingIndex, nextSlide, prevSlide, paintingData } =
+    usePaintings();
   const { hideModal } = useContext(Context);
   const navigate = useNavigate();
 
@@ -28,6 +29,11 @@ const Interface = () => {
           &nbsp;
           {`${curPaintingIndex + 1} / ${curSection?.data.length}`}
         </span>
+        <p>
+          {paintingData?.paintingTitle}, {paintingData?.size},{" "}
+          {paintingData?.technique}, {paintingData?.year}
+        </p>
+        <p></p>
       </h3>
       {/* arrows */}
       <i

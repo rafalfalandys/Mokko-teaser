@@ -6,7 +6,7 @@ type Props = {
   sectionData: CardType[];
   folder: string;
   header: string;
-  description: string;
+  description: { __html: string | TrustedHTML };
 };
 
 const OneSection: React.FC<Props> = ({
@@ -24,7 +24,10 @@ const OneSection: React.FC<Props> = ({
       <header className="main__section__header">
         <h2>{header}</h2>
       </header>
-      <p className="main__section__description">{description}</p>
+      <div
+        className="main__section__description"
+        dangerouslySetInnerHTML={description}
+      />
       <div className="main__section__paintings">{paintingCards}</div>
     </section>
   );

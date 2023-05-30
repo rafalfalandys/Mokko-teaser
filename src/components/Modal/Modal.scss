@@ -35,8 +35,12 @@
       width: 100%;
       height: 100%;
       max-width: 85vw;
-      max-height: 80vh;
+      max-height: 75vh;
       object-fit: contain;
+
+      @media (max-width: $break-phone) {
+        max-width: 100vw;
+      }
     }
 
     &.hidden {

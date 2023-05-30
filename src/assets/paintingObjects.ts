@@ -171,6 +171,13 @@ export const dataTinySensibility: CardType[] = [
 
 export const dataMeBlindWoman: CardType[] = [
   {
+    fileName: "Czerwien koloru ciala (1)",
+    paintingTitle: "Czerwień koloru ciała (1)",
+    year: "2022",
+    technique: "olej na płótnie",
+    size: "90x90 cm",
+  },
+  {
     fileName: "Czerwien koloru ciala (2)",
     paintingTitle: "Czerwień koloru ciała (2)",
     year: "2022",

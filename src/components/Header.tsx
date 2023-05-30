@@ -12,7 +12,11 @@ const Header: React.FC = () => {
           <img src={logo} alt="logo" />
         </figure>
         <h1 className="header__title">{text.title}</h1>
-        <p className="header__description">{text.description}</p>
+        <div
+          className="header__description"
+          dangerouslySetInnerHTML={text.description}
+        />
+        {/* <p className="header__description">{text.description}</p> */}
         <p></p>
       </header>
     </div>
