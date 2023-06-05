@@ -1,21 +1,8 @@
-@import "../styles/variables";
-
-.header {
-  position: relative;
-
-  &__logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  & p {
-    white-space: pre-line;
-  }
-}
+@import "../../styles/variables";
 
 .language-switch {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   font-size: $font-medium;
   color: $color-grey-light;

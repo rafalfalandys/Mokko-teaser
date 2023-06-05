@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+
+.header {
+  font-size: $font-medium;
+
+  &__info-box {
+    display: grid;
+    grid-template-columns: 40% auto;
+    gap: $grid-gap;
+    position: relative;
+
+    @media (max-width: $break-phone) {
+      grid-template-columns: 100%;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 0;
+  }
+
+  &__name {
+    font-size: $font-large-very;
+  }
+
+  &__in {
+    font-size: $font-large;
+    font-weight: 200;
+    margin-top: 1.6rem;
+  }
+
+  &__dates {
+    font-size: $font-large;
+    margin: 1.6rem 0;
+  }
+
+  &__curator-producer {
+    font-weight: 200;
+  }
+
+  &__opening {
+    margin-top: 1.6rem;
+  }
+
+  &__place-address {
+    font-weight: 200;
+  }
+
+  &__description {
+    margin-top: 5rem;
+  }
+}

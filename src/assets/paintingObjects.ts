@@ -61,7 +61,7 @@ export const dataEphemerally: CardType[] = [
 export const dataPureHappiness: CardType[] = [
   {
     fileName: "Sama szczesciem chwila",
-    paintingTitle: "Sama szczęściem chwila",
+    paintingTitle: "Sama szczęściem chwila",
     year: "2023",
     technique: "olej na płótnie",
     size: "100x130 cm",
@@ -171,8 +171,8 @@ export const dataTinySensibility: CardType[] = [
 
 export const dataMeBlindWoman: CardType[] = [
   {
-    fileName: "Czerwien koloru ciala (1)",
-    paintingTitle: "Czerwień koloru ciała (1)",
+    fileName: "Czerwien koloru ciala (3)",
+    paintingTitle: "Czerwień koloru ciała (3)",
     year: "2022",
     technique: "olej na płótnie",
     size: "90x90 cm",
@@ -185,18 +185,11 @@ export const dataMeBlindWoman: CardType[] = [
     size: "90x90 cm",
   },
   {
-    fileName: "Czerwien koloru ciala (3)",
-    paintingTitle: "Czerwień koloru ciała (3)",
+    fileName: "Czerwien koloru ciala (1)",
+    paintingTitle: "Czerwień koloru ciała (1)",
     year: "2022",
     technique: "olej na płótnie",
     size: "90x90 cm",
-  },
-  {
-    fileName: "Kobieta 14",
-    paintingTitle: "Kobieta 14",
-    year: "2022",
-    technique: "olej na płótnie",
-    size: "70x130 cm",
   },
   {
     fileName: "Kobieta 15",
@@ -204,6 +197,13 @@ export const dataMeBlindWoman: CardType[] = [
     year: "2022",
     technique: "olej na płótnie",
     size: "50x130 cm",
+  },
+  {
+    fileName: "Kobieta 14",
+    paintingTitle: "Kobieta 14",
+    year: "2022",
+    technique: "olej na płótnie",
+    size: "70x130 cm",
   },
   {
     fileName: "Kobieta 13",

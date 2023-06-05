@@ -4,11 +4,11 @@ html {
   font-size: 62.5%;
 
   @media only screen and (max-width: $break-tablet) {
-    font-size: 50%;
+    font-size: 58%;
   }
 
   @media only screen and (max-width: $break-phone-tiny) {
-    font-size: 37.5%;
+    font-size: 50%;
   }
 }
 
@@ -44,7 +44,7 @@ a {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: $font-large-very;
   font-weight: 300;
   margin: 3rem 0 2rem 0;
 }

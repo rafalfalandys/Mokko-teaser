@@ -22,10 +22,10 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
         </figure>
       </Link>
       <div className="card__description">
-        <span>{paintingTitle}</span>
-        <span>{size}</span>
-        <span>{technique}</span>
-        <span>{year}</span>
+        <span>{paintingTitle.normalize()}</span>
+        <span>{size.normalize()}</span>
+        <span>{technique.normalize()}</span>
+        <span>{year.normalize()}</span>
       </div>
     </div>
   );

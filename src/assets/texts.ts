@@ -1,10 +1,20 @@
 type Texts = {
   title: string;
+  exhibitionType: string;
+  curator: string;
+  producer: string;
+  opening: string;
+  place: string;
+  address: string;
+
   description: { __html: string | TrustedHTML };
+  headerBeforeAllPaintings: string;
+
   headerMeBlindWoman: string;
   headerTinySensibility: string;
   headerPureHappiness: string;
   headerEphemerally: string;
+
   textMeBlindWoman: { __html: string | TrustedHTML };
   textTinySensibility: { __html: string | TrustedHTML };
   textPureHappiness: { __html: string | TrustedHTML };
@@ -12,11 +22,18 @@ type Texts = {
 };
 
 export const textsEN: Texts = {
-  title: "The exhibition with a beautifull name",
+  title: "ME, BLIND HUMAN",
+  exhibitionType: "individual art exhibition",
+  curator: "curator: Natalia Pacek",
+  producer: "producer: Ewa Skrzyniarz",
+  opening: "opening: 07-06-2023, 19:00",
+  place: "THE HATZFELDT PALACE",
+  address: "Wita Stwosza 32, Wrocław",
   description: {
     __html:
-      "<p> Monika Kocielska (ur.1989)</p> <p> urodzona w Rzeszowie, absolwentka Wydziału Architektury Politechniki Krakowskiej (2014) oraz Wydziału Sztuki Uniwersytetu Rzeszowskiego (2016), dyplom magisterski z dziedziny malarstwa przygotowany pod okiem profesorów: Antoniego Nikla, Marka Olszyńskiego i Marka Pokrywki, w 2023 roku ukończyła studia podyplomowe na kierunku Mediacja i Rynek Sztuki na Akademii Sztuk Pięknych we Wrocławiu, pracuje obecnie jako architekt we Wrocławiu - specjalizuje się w projektowaniu wnętrz statków wycieczkowych, kontynuuje działalność artystyczną tworząc głównie w malarstwie olejnym i akwarelowym, uczestniczka i organizatorka wielu wystaw indywidualnych, zbiorowych oraz warsztatów artystycznych. </p>",
+      "<p> Every person is different, we differ from one another. However, we are connected by two common traits: we all have emotions and we all are blind. Despite the fact that the vast majority of us use one of the most invaluable senses, which is sight, and have the ability to continuously look at the world around us, passing people, occurring situations - we all are blind. Nearly 8 billion people in the world suffer from blindness while having perfect vision. Paradoxically, this blindness deepens with age, knowledge, and experience. Throughout our lives, we perceive every circumstance and every other person that we meet, through the lens of our own self - our emotions, thoughts, and feelings. As we go through life, we rely solely on our own impressions, interpreting situations through our own filters. The result of these actions is a missed and unreal vision of reality. An exhibition of contemporary artist Monika Kocielska's oil paintings can be seen as a response to this peculiar form of blindness. </p> <p> The exhibition 'Me, Blind Human' is a kind of experiment aimed at examining whether it is possible to see things as they truly are. Is it possible to understand the emotions, thoughts, and feelings of another person in their pure form, without processing them through our own perspective? Is it even possible, and if so, to what extent? </p> <p> Monika Kocielska's work corresponds with Olga Tokarczuk's theory of the 'sensitive narrator.' According to the writer, he is an all-knowing being, aware of all the secrets of an individual as well as life itself. Tokarczuk highlights the lack of understanding of metaphors, which art and the world are based upon. Kocielska, with her astute eye, observes everyday life and the associated phenomena. The artist's works serve as a lens of the 'sensitive narrator' through which we can look at the surrounding reality. To heal selective blindness. To sharpen our vision. </p> <p> The exhibition will take place in a special venue for Wrocław's art world - the space of the Hatzfeldt Palace on Wita Stwosza Street, which has lived for years presenting the artworks of artists from all over the world, as a highly regarded area of Wrocław's BWA (Bureau of Art Exhibitions). After many twists and turns in its history, this place will come to life once again, along with deeper reflections on contemporary reality. </p>",
   },
+  headerBeforeAllPaintings: "Artworks presented on the exhibition",
   headerMeBlindWoman: "Me, blind woman",
   headerTinySensibility: "Small Sensibility",
   headerPureHappiness: "One Happiness",
@@ -44,11 +61,20 @@ export const textsEN: Texts = {
 };
 
 export const textsPL: Texts = {
-  title: "Wystawa o pięknej nazwie",
+  title: "JA, ŚLEPY CZŁOWIEK",
+  exhibitionType: "indywidualna wystawa sztuki",
+  curator: "kuratorka: Natalia Pacek",
+  producer: "producentka: Ewa Skrzyniarz",
+  opening: "wernisaż: 07-06-2023, 19:00",
+  place: "PAŁAC HATZFELDÓW",
+  address: "Wita Stwosza 32, Wrocław",
+
   description: {
     __html:
-      "<p> Monika Kocielska (ur.1989)</p> <p> urodzona w Rzeszowie, absolwentka Wydziału Architektury Politechniki Krakowskiej (2014) oraz Wydziału Sztuki Uniwersytetu Rzeszowskiego (2016), dyplom magisterski z dziedziny malarstwa przygotowany pod okiem profesorów: Antoniego Nikla, Marka Olszyńskiego i Marka Pokrywki, w 2023 roku ukończyła studia podyplomowe na kierunku Mediacja i Rynek Sztuki na Akademii Sztuk Pięknych we Wrocławiu, pracuje obecnie jako architekt we Wrocławiu - specjalizuje się w projektowaniu wnętrz statków wycieczkowych, kontynuuje działalność artystyczną tworząc głównie w malarstwie olejnym i akwarelowym, uczestniczka i organizatorka wielu wystaw indywidualnych, zbiorowych oraz warsztatów artystycznych. </p>",
+      "<p> Jako ludzie różnimy się. Natomiast łączą nas dwie jednakowe cechy: posiadamy emocje i jesteśmy ślepi. Mimo że znacząca większość z nas, codziennie korzysta z jednego z nieocenionych zmysłów, jakim jest wzrok, ma możliwość patrzeć bez przerwy na otaczający nas świat, przemykających ludzi, toczące się sytuacje - jesteśmy ślepi. Niemalże 8 miliardów ludzi na świecie cierpi na ślepotę, widząc doskonale. Paradoksalnie pogłębia się ona z wiekiem, zdobywaną wiedzą i doświadczeniem. Człowiek podczas swojego życia odbiera każde zjawisko oraz każdego innego człowieka przez pryzmat własnego JA -  swoich emocji, myśli, odczuć. Idąc przez życie, opieramy się wyłącznie na własnych wrażeniach, interpretując dane nam sytuacje przez swój filtr. Skutkiem tych działań jest zgubna i nierealna wizja rzeczywistości. Odpowiedzią na ten specyficzny rodzaj ślepoty może okazać się wystawa malarstwa olejnego współczesnej artystki Moniki Kocielskiej. </p> <p>Wystawa „Ja, ślepy człowiek” jest swego rodzaju eksperymentem, mającym na celu zbadanie, czy da się ujrzeć zjawiska takimi, jakimi one są. Czy da się zrozumieć emocje, myśli i odczucia drugiej osoby w ich czystej formie, bez przetwarzania ich przez własną perspektywę? Czy jest to w ogóle możliwe, a jeśli tak to w jakim stopniu? </p> <p> Twórczość Moniki Kocielskiej koresponduje z teorią „czułego narratora” Olgi Tokarczuk. Według pisarki jest on bytem wszechwiedzącym, znającym wszystkie tajemnice pojedynczej istoty, jak i życia samego w sobie. Tokarczuk zwraca uwagę na brak zrozumienia metafor, na których oparta jest sztuka i świat. Kocielska wnikliwym okiem przygląda się codzienności i związanym z nią zjawiskom. Sztuka artystki jest swego rodzaju soczewką „czułego narratora” , przez którą możemy patrzeć na otaczającą nas rzeczywistość. Uleczyć wybiórczą ślepotę. Nabrać ostrości widzenia. </p> <p> Wystawa odbędzie się w miejscu szczególnym dla Wrocławskiej sztuki - przestrzeń Pałacu Hatzfeldów na ulicy Wita Stwosza, przez lata żyła w symbiozie z dziełami artystów z różnych zakątków świata. Po wielu zawirowaniach, miejsce te ożyje na nowo, a wraz z nim głębsze refleksje dotyczące współczesnej rzeczywistości. </p>",
   },
+
+  headerBeforeAllPaintings: "Prace prezentowane na wystawie",
   headerMeBlindWoman: "Ja, ślepa kobieta",
   headerTinySensibility: "Mała wrażliwość",
   headerPureHappiness: "Samo szczęście",
