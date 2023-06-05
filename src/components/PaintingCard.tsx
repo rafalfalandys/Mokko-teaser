@@ -1,15 +1,24 @@
 import { useContext } from "react";
-import { PaintingData } from "../types";
 import "./PaintingCard.scss";
 import Context from "../store/context";
 import { Link } from "react-router-dom";
 import useBuildQuery from "../hooks/useBuildQuery";
+import { CardType } from "../assets/paintingObjects";
 
-type PropsType = { paintingData: PaintingData; folder: string };
+type PropsType = { paintingData: CardType; folder: string };
 
 const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
-  const { showModal } = useContext(Context);
-  const { paintingTitle, fileName, size, technique, year } = paintingData;
+  const { showModal, isEnglish } = useContext(Context);
+  const {
+    paintingTitle,
+    paintingTitleEN,
+    fileName,
+    size,
+    technique,
+    techniqueEN,
+    year,
+    price,
+  } = paintingData;
   const buildQuery = useBuildQuery();
 
   const imgPath = `/images/small/${folder}/${fileName}.jpeg`;
@@ -22,10 +31,13 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
         </figure>
       </Link>
       <div className="card__description">
-        <span>{paintingTitle.normalize()}</span>
+        <span>
+          {isEnglish ? paintingTitleEN.normalize() : paintingTitle.normalize()}
+        </span>
         <span>{size.normalize()}</span>
-        <span>{technique.normalize()}</span>
+        <span>{isEnglish ? techniqueEN : technique.normalize()}</span>
         <span>{year.normalize()}</span>
+        {price && <span>{price} zł</span>}
       </div>
     </div>
   );

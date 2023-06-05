@@ -20,8 +20,8 @@ const Main: React.FC = () => {
   return (
     <div className="main__wrapper">
       <main className="main">
-        <h2>{text.headerBeforeAllPaintings}</h2>
-        {sections}
+        <h2 className="main__header">{text.headerBeforeAllPaintings}:</h2>
+        <div className="main__sections__wrapper">{sections}</div>
       </main>
       ;
     </div>

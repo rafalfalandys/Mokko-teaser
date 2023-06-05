@@ -22,7 +22,7 @@ const OneSection: React.FC<Props> = ({
   return (
     <section className="main__section">
       <header className="main__section__header">
-        <h2>{header}</h2>
+        <h3>{header}</h3>
       </header>
       <div
         className="main__section__description"

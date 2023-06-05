@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const Interface = () => {
   const { curSection, curPaintingIndex, nextSlide, prevSlide, paintingData } =
     usePaintings();
-  const { hideModal } = useContext(Context);
+  const { hideModal, isEnglish } = useContext(Context);
   const navigate = useNavigate();
 
   const hideModalHandler = () => {
@@ -30,8 +30,14 @@ const Interface = () => {
           {`${curPaintingIndex + 1} / ${curSection?.data.length}`}
         </span>
         <p>
-          {paintingData?.paintingTitle}, {paintingData?.size},{" "}
-          {paintingData?.technique}, {paintingData?.year}
+          {isEnglish
+            ? paintingData?.paintingTitleEN.normalize()
+            : paintingData?.paintingTitle.normalize()}
+          , {paintingData?.size},{" "}
+          {isEnglish
+            ? paintingData?.paintingTitleEN.normalize()
+            : paintingData?.technique.normalize()}
+          , {paintingData?.year}
         </p>
         <p></p>
       </h3>

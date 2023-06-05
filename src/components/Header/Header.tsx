@@ -16,7 +16,13 @@ const Header: React.FC = () => {
           <div className="header__info-box__text">
             <h1 className="header__title">{text.title}</h1>
             <span className="header__name">Monika Kocielska</span>
-            <span className="header__in">@kocielska_mokkoart</span>
+            <a
+              href="https://www.instagram.com/kocielska_mokkoart/"
+              className="header__in"
+              target="_blank"
+            >
+              in: @kocielska_mokkoart
+            </a>
             <span className="header__dates">07-06 / 20 - 06.2023</span>
             <span className="header__exhibition-type">
               {text.exhibitionType}
