@@ -18,6 +18,7 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
     techniqueEN,
     year,
     price,
+    priceEN,
   } = paintingData;
   const buildQuery = useBuildQuery();
 
@@ -25,7 +26,7 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
 
   return (
     <div className="card">
-      <Link to={buildQuery(folder, paintingTitle)}>
+      <Link to={buildQuery(folder, fileName)}>
         <figure className="card__image" onClick={showModal}>
           <img src={imgPath} alt="painting" />
         </figure>
@@ -37,7 +38,9 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
         <span>{size.normalize()}</span>
         <span>{isEnglish ? techniqueEN : technique.normalize()}</span>
         <span>{year.normalize()}</span>
-        {price && <span>{price} zł</span>}
+        <span>
+          {isEnglish ? priceEN : price} {typeof price === "number" ? "zł" : ""}
+        </span>
       </div>
     </div>
   );

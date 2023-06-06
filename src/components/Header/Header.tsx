@@ -37,6 +37,9 @@ const Header: React.FC = () => {
             <LanguageSwitch />
           </div>
         </div>
+        <div className="main__section__header">
+          <h3>{text.title}</h3>
+        </div>
         <div
           className="header__description"
           dangerouslySetInnerHTML={text.description}

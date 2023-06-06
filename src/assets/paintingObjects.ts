@@ -6,7 +6,8 @@ export type CardType = {
   technique: string;
   techniqueEN: string;
   size: string;
-  price: number | undefined;
+  price: number | string;
+  priceEN?: string;
 };
 
 export const dataEphemerally: CardType[] = [
@@ -247,7 +248,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: 11000,
+    price: `11000 zł (cały tryptyk)`,
+    priceEN: "11000 zł (the whole triptych)",
   },
   {
     fileName: "Czerwien koloru ciala (2)",
@@ -257,7 +259,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: 11000,
+    price: `11000 zł (cały tryptyk)`,
+    priceEN: "11000 zł (the whole triptych)",
   },
   {
     fileName: "Czerwien koloru ciala (1)",
@@ -267,7 +270,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: 11000,
+    price: `11000 zł (cały tryptyk)`,
+    priceEN: "11000 zł (the whole triptych)",
   },
   {
     fileName: "Kobieta 15",
@@ -379,14 +383,14 @@ export const dataMeBlindWoman: CardType[] = [
     size: "130x130 cm",
     price: 11000,
   },
-  {
-    fileName: "Kobieta 01",
-    paintingTitle: "Kobieta 01",
-    paintingTitleEN: "Woman 01",
-    year: "2016",
-    technique: "olej na płótnie",
-    techniqueEN: "oil on canvas",
-    size: "130x130 cm",
-    price: 11000,
-  },
+  // {
+  //   fileName: "Kobieta 01",
+  //   paintingTitle: "Kobieta 01",
+  //   paintingTitleEN: "Woman 01",
+  //   year: "2016",
+  //   technique: "olej na płótnie",
+  //   techniqueEN: "oil on canvas",
+  //   size: "130x130 cm",
+  //   price: 11000,
+  // },
 ];

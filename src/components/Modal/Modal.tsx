@@ -6,11 +6,12 @@ import usePaintings from "../../hooks/usePaintings";
 import { createPortal } from "react-dom";
 import Interface from "./Interface";
 import useKeys from "../../hooks/use-keys";
+import { emptyPaintingObj } from "../../helper";
 
 const Modal = () => {
   const { isModalVisible, hideModal, showModal } = useContext(Context);
   const navigate = useNavigate();
-  const { curSection, paintingData } = usePaintings();
+  const { curSection, curPainting } = usePaintings();
   const location = useLocation();
   useKeys();
 
@@ -18,9 +19,10 @@ const Modal = () => {
   const portalEl = document.getElementById("overlays")!;
 
   // defining dynamic path to proper image
-  const imgPath = paintingData
-    ? `/images/large/${curSection.folder}/${paintingData.fileName}.jpeg`
-    : "";
+  const imgPath =
+    curPainting !== emptyPaintingObj
+      ? `/images/large/${curSection.folder}/${curPainting.fileName}.jpeg`
+      : "";
 
   // show model after sending a link
   useEffect(() => {
@@ -42,7 +44,7 @@ const Modal = () => {
       <figure className={`modal__image ${isModalVisible ? "" : "hidden"}`}>
         <img
           src={imgPath}
-          alt={paintingData ? paintingData.fileName : ""}
+          alt={curPainting ? curPainting.fileName : ""}
           onClick={(e) => e.stopPropagation()}
         />
       </figure>

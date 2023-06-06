@@ -21,9 +21,9 @@ const OneSection: React.FC<Props> = ({
 
   return (
     <section className="main__section">
-      <header className="main__section__header">
+      <div className="main__section__header">
         <h3>{header}</h3>
-      </header>
+      </div>
       <div
         className="main__section__description"
         dangerouslySetInnerHTML={description}

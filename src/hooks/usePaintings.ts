@@ -1,77 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import {
-  CardType,
-  dataEphemerally,
-  dataMeBlindWoman,
-  dataPureHappiness,
-  dataTinySensibility,
-} from "../assets/paintingObjects";
-import useQuery from "./useQuery";
-import useText from "./useText";
 import useBuildQuery from "./useBuildQuery";
-
-type AllSectionsData = {
-  folder: string;
-  data: CardType[];
-  header: string;
-  description: { __html: string | TrustedHTML };
-};
+import useAllSections from "./useAllSections";
+import useCurrent from "./useCurrent";
 
 const usePaintings = () => {
-  const text = useText();
-  const queryObj = useQuery();
   const navigate = useNavigate();
   const buildQuery = useBuildQuery();
 
-  const allSectionsData: AllSectionsData[] = [
-    {
-      folder: "me blind woman",
-      data: dataMeBlindWoman,
-      header: `${text.headerMeBlindWoman}`,
-      description: text.textMeBlindWoman,
-    },
-    {
-      folder: "tiny sensibility",
-      data: dataTinySensibility,
-      header: `${text.headerTinySensibility}`,
-      description: text.textTinySensibility,
-    },
-    {
-      folder: "pure happiness",
-      data: dataPureHappiness,
-      header: `${text.headerPureHappiness}`,
-      description: text.textPureHappiness,
-    },
-    {
-      folder: "ephemerally",
-      data: dataEphemerally,
-      header: `${text.headerEphemerally}`,
-      description: text.textEphemerally,
-    },
-  ];
-
-  // finding section in all paintings basing on query
-  const curSection = allSectionsData.filter(
-    (section) => section.folder === decodeURI(queryObj.section)
-  )[0];
-
-  // fainding painting within section basing on query
-  const paintingData = curSection
-    ? curSection.data.filter(
-        (painting) => painting.paintingTitle === decodeURI(queryObj.painting)
-      )[0]
-    : undefined;
-
-  // section and painting index
-  const curSectionIndex = curSection
-    ? allSectionsData.findIndex((sectionObj) => {
-        return sectionObj.folder === curSection.folder;
-      })
-    : 0;
-
-  const curPaintingIndex = curSection?.data.findIndex(
-    (painting) => painting.paintingTitle === paintingData?.paintingTitle
-  );
+  const allSectionsData = useAllSections();
+  const { curSection, curPaintingIndex, curSectionIndex, curPainting } =
+    useCurrent();
 
   // next / previous slide
   const nextSection = () => {
@@ -92,11 +30,11 @@ const usePaintings = () => {
     if (curPaintingIndex === curSection.data.length - 1) {
       const nextSectionObj = nextSection();
       navigate(
-        buildQuery(nextSectionObj.folder, nextSectionObj.data[0].paintingTitle)
+        buildQuery(nextSectionObj.folder, nextSectionObj.data[0].fileName)
       );
     } else {
       const nextPainting = curSection.data[curPaintingIndex + 1];
-      navigate(buildQuery(curSection.folder, nextPainting.paintingTitle));
+      navigate(buildQuery(curSection.folder, nextPainting.fileName));
     }
   };
 
@@ -106,19 +44,19 @@ const usePaintings = () => {
       navigate(
         buildQuery(
           prevSectionObj.folder,
-          prevSectionObj.data[prevSectionObj.data.length - 1].paintingTitle
+          prevSectionObj.data[prevSectionObj.data.length - 1].fileName
         )
       );
     } else {
       const nextPainting = curSection.data[curPaintingIndex - 1];
-      navigate(buildQuery(curSection.folder, nextPainting.paintingTitle));
+      navigate(buildQuery(curSection.folder, nextPainting.fileName));
     }
   };
 
   return {
     allSectionsData,
     curSection,
-    paintingData,
+    curPainting,
     curPaintingIndex,
     nextSlide,
     prevSlide,
