@@ -24,9 +24,10 @@ const Modal = () => {
       ? `/images/large/${curSection.folder}/${curPainting.fileName}.jpeg`
       : "";
 
+  console.log(location.search);
   // show model after sending a link
   useEffect(() => {
-    if (location.search) showModal();
+    if (location.search.includes("?section=")) showModal();
   }, []);
 
   // hiding modal and navigating back to home page

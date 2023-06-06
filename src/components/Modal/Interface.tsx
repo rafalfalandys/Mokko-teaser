@@ -12,19 +12,10 @@ import { useNavigate } from "react-router-dom";
 const Interface = () => {
   const { curSection, curPaintingIndex, nextSlide, prevSlide, curPainting } =
     usePaintings();
-  const { hideModal, isEnglish } = useContext(Context);
+  const { hideModal } = useContext(Context);
   const navigate = useNavigate();
 
-  const {
-    paintingTitle,
-    paintingTitleEN,
-    size,
-    technique,
-    techniqueEN,
-    year,
-    price,
-    priceEN,
-  } = curPainting;
+  const { paintingTitle, size, technique, year, price } = curPainting;
 
   const hideModalHandler = () => {
     hideModal();
@@ -41,10 +32,8 @@ const Interface = () => {
           {`${curPaintingIndex + 1} / ${curSection?.data.length}`}
         </span>
         <p>
-          {isEnglish ? paintingTitleEN.normalize() : paintingTitle.normalize()},{" "}
-          {size},{" "}
-          {isEnglish ? paintingTitleEN.normalize() : technique.normalize()},{" "}
-          {year}
+          {paintingTitle.normalize()}, {size}, {technique.normalize()}, {year},{" "}
+          {price}
         </p>
         <p></p>
       </h3>

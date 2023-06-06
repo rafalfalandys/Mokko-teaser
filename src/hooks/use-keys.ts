@@ -20,7 +20,9 @@ function useKeys() {
     (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         hideModal();
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 300);
       }
     },
     [hideModal, navigate]

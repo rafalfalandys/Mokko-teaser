@@ -10,7 +10,7 @@
     cursor: pointer;
 
     @media (max-width: $break-phone) {
-      top: 85%;
+      top: 87%;
     }
 
     &--arrow-left {
@@ -32,6 +32,10 @@
     &--close {
       top: 2rem;
       right: 2rem;
+
+      @media (max-width: $break-phone) {
+        top: 0.8rem;
+      }
     }
 
     & svg {
@@ -42,8 +46,7 @@
 
   &__counter {
     position: relative;
-    top: 2.6rem;
-    left: 2rem;
+    padding: 2.6rem 2rem;
     color: $color-grey-light-very;
 
     @media (max-width: $break-phone) {

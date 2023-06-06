@@ -39,7 +39,8 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
         <span>{isEnglish ? techniqueEN : technique.normalize()}</span>
         <span>{year.normalize()}</span>
         <span>
-          {isEnglish ? priceEN : price} {typeof price === "number" ? "zł" : ""}
+          {isEnglish ? (priceEN ? priceEN : price) : price}{" "}
+          {typeof price === "number" ? "zł" : ""}
         </span>
       </div>
     </div>

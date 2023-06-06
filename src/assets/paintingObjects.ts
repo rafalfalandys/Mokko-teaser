@@ -331,7 +331,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "100x130 cm",
-    price: 9500,
+    price: "z kolekcji prywatnej",
+    priceEN: "private collection",
   },
   {
     fileName: "Kobieta 08",

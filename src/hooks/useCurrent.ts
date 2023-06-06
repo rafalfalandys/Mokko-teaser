@@ -38,7 +38,8 @@ const useCurrent = () => {
         fileName,
         paintingTitle: isEnglish ? paintingTitleEN : paintingTitle,
         paintingTitleEN,
-        price: isEnglish ? (priceEN ? priceEN : price) : price,
+        price: `${isEnglish ? (priceEN ? priceEN : price) : price}
+        ${typeof price === "number" ? "zł" : ""}`,
         size,
         technique: isEnglish ? techniqueEN : technique,
         techniqueEN,
