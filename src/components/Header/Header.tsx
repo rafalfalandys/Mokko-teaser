@@ -2,6 +2,7 @@ import "./Header.scss";
 import useText from "../../hooks/useText";
 import logo from "../../assets/logo-exhibition.jpeg";
 import LanguageSwitch from "./LanguageSwitch";
+import { InstagramLogo } from "@phosphor-icons/react";
 
 const Header: React.FC = () => {
   const text = useText();
@@ -21,7 +22,8 @@ const Header: React.FC = () => {
               className="header__in"
               target="_blank"
             >
-              in: @kocielska_mokkoart
+              <InstagramLogo />
+              @kocielska_mokkoart
             </a>
             <span className="header__dates">07-06 / 20 - 06.2023</span>
             <span className="header__exhibition-type">
