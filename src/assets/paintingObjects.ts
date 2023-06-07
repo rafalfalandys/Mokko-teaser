@@ -92,7 +92,7 @@ export const dataPureHappiness: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "100x130 cm",
-    price: 9500,
+    price: 8500,
   },
   {
     fileName: "Same szczescia bledna",
@@ -112,7 +112,7 @@ export const dataPureHappiness: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "130x100 cm",
-    price: 9500,
+    price: 8500,
   },
   {
     fileName: "Samym szczesciem dzielenie",
@@ -122,7 +122,7 @@ export const dataPureHappiness: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "100x130 cm",
-    price: 9500,
+    price: 8500,
   },
 ];
 
@@ -248,8 +248,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: `11000 zł (cały tryptyk)`,
-    priceEN: "11000 zł (the whole triptych)",
+    price: `10000 zł (cały tryptyk)`,
+    priceEN: "10000 zł (the whole triptych)",
   },
   {
     fileName: "Czerwien koloru ciala (2)",
@@ -259,8 +259,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: `11000 zł (cały tryptyk)`,
-    priceEN: "11000 zł (the whole triptych)",
+    price: `10000 zł (cały tryptyk)`,
+    priceEN: "10000 zł (the whole triptych)",
   },
   {
     fileName: "Czerwien koloru ciala (1)",
@@ -270,8 +270,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: `11000 zł (cały tryptyk)`,
-    priceEN: "11000 zł (the whole triptych)",
+    price: `10000 zł (cały tryptyk)`,
+    priceEN: "10000 zł (the whole triptych)",
   },
   {
     fileName: "Kobieta 15",
@@ -351,8 +351,8 @@ export const dataMeBlindWoman: CardType[] = [
     year: "2016",
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
-    size: "90x130 cm",
-    price: 9000,
+    size: "70x130 cm",
+    price: 8000,
   },
   // {
   //   fileName: "Kobieta 05",
@@ -372,7 +372,7 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x130 cm",
-    price: 9000,
+    price: 8000,
   },
   {
     fileName: "Kobieta 02",
@@ -382,7 +382,7 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "130x130 cm",
-    price: 11000,
+    price: 10000,
   },
   // {
   //   fileName: "Kobieta 01",
