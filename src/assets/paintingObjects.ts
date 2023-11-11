@@ -248,8 +248,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: `10000 zł (cały tryptyk)`,
-    priceEN: "10000 zł (the whole triptych)",
+    price: `10000 zł + VAT (cały tryptyk)`,
+    priceEN: "10000 zł + VAT (the whole triptych)",
   },
   {
     fileName: "Czerwien koloru ciala (2)",
@@ -259,8 +259,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: `10000 zł (cały tryptyk)`,
-    priceEN: "10000 zł (the whole triptych)",
+    price: `10000 zł + VAT (cały tryptyk)`,
+    priceEN: "10000 zł + VAT (the whole triptych)",
   },
   {
     fileName: "Czerwien koloru ciala (1)",
@@ -270,8 +270,8 @@ export const dataMeBlindWoman: CardType[] = [
     technique: "olej na płótnie",
     techniqueEN: "oil on canvas",
     size: "90x90 cm",
-    price: `10000 zł (cały tryptyk)`,
-    priceEN: "10000 zł (the whole triptych)",
+    price: `10000 zł + VAT (cały tryptyk)`,
+    priceEN: "10000 zł + VAT (the whole triptych)",
   },
   {
     fileName: "Kobieta 15",

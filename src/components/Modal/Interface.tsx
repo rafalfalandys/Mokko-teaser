@@ -15,7 +15,7 @@ const Interface = () => {
   const { hideModal } = useContext(Context);
   const navigate = useNavigate();
 
-  const { paintingTitle, size, technique, year, price } = curPainting;
+  const { paintingTitle, size, technique, year } = curPainting;
 
   const hideModalHandler = () => {
     hideModal();
@@ -32,8 +32,8 @@ const Interface = () => {
           {`${curPaintingIndex + 1} / ${curSection?.data.length}`}
         </span>
         <p>
-          {paintingTitle.normalize()}, {size}, {technique.normalize()}, {year},{" "}
-          {price}
+          {paintingTitle.normalize()}, {size}, {technique.normalize()}, {year}
+          {/* ,{" "}{price} */}
         </p>
         <p></p>
       </h3>

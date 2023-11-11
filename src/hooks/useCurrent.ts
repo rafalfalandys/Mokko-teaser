@@ -39,7 +39,7 @@ const useCurrent = () => {
         paintingTitle: isEnglish ? paintingTitleEN : paintingTitle,
         paintingTitleEN,
         price: `${isEnglish ? (priceEN ? priceEN : price) : price}
-        ${typeof price === "number" ? "zł" : ""}`,
+        ${typeof price === "number" ? "zł + VAT" : ""}`,
         size,
         technique: isEnglish ? techniqueEN : technique,
         techniqueEN,

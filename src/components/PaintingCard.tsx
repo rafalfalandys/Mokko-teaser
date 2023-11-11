@@ -17,8 +17,8 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
     technique,
     techniqueEN,
     year,
-    price,
-    priceEN,
+    // price,
+    // priceEN,
   } = paintingData;
   const buildQuery = useBuildQuery();
 
@@ -38,10 +38,10 @@ const PaintingCard: React.FC<PropsType> = ({ paintingData, folder }) => {
         <span>{size.normalize()}</span>
         <span>{isEnglish ? techniqueEN : technique.normalize()}</span>
         <span>{year.normalize()}</span>
-        <span>
+        {/* <span>
           {isEnglish ? (priceEN ? priceEN : price) : price}{" "}
-          {typeof price === "number" ? "zł" : ""}
-        </span>
+          {typeof price === "number" ? "zł + VAT" : ""}
+        </span> */}
       </div>
     </div>
   );
